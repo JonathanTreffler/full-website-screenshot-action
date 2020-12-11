@@ -1,0 +1,21 @@
+name: 'Screenshot Action'
+description: 'A composite action that uses capture-website-cli to capture a full screenshot of a url and save it'
+inputs:
+  url:
+    description: 'The URL of the site, that should get captured'
+    required: true
+    default: ''
+  destination:
+    description: 'Where to save the screenshot'
+    required: false
+    default: './screenshot.png'
+runs:
+  using: "composite"
+  steps: 
+    - name: Install capture-website-cli
+      run: |
+        npm install --global capture-website-cli
+      
+    - name: Screenshot Website
+      run: |
+        capture-website ${{ inputs.url }} --output ${{ inputs.destination }} --full-page
