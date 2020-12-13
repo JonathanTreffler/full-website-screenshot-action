@@ -1,5 +1,5 @@
 name: 'Screenshot Action'
-description: 'A composite action that uses capture-website-cli to capture a full screenshot of a url and save it'
+description: 'This Action uses Puppeteer to capture a full screenshot of a website and save it'
 inputs:
   url:
     description: 'The URL of the site, that should get captured'
@@ -9,6 +9,9 @@ inputs:
     description: 'Where to save the screenshot'
     required: false
     default: './screenshot.png'
+branding:
+  icon: 'layout'  
+  color: 'orange'
 runs:
   using: "composite"
   steps:
