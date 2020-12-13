@@ -1,8 +1,10 @@
-# Screenshot Action
-A composite action that uses capture-website-cli to capture a full screenshot of a website and save it.
+# Full Website Screenshot Action
+This Action uses Puppeteer to capture a full screenshot of a website and save it.
+
+All Puppeteer interaction is handled by [capture-website-cli](https://github.com/sindresorhus/capture-website-cli).
 
 # Usage:
-```
+```yml
 jobs:
   screenshot:
     runs-on: ubuntu-latest
