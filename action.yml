@@ -23,4 +23,4 @@ runs:
     shell: bash
     run: |
       capture-website ${{ inputs.url }} --output ${{ inputs.destination }} --full-page
-      && echo "Screenshot done"
+      echo "Screenshot done"
