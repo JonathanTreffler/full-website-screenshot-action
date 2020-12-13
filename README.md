@@ -14,7 +14,7 @@ jobs:
           node-version: '14'
       
       - name: Test Action
-        uses: JonathanTreffler/screenshot-action@main
+        uses: JonathanTreffler/screenshot-action@v1.0
         with:
           url: https://example.com
           destination: ./screenshot.png
