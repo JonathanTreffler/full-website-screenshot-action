@@ -11,11 +11,7 @@ inputs:
     default: './screenshot.png'
 runs:
   using: "composite"
-  steps: 
-  - uses: actions/setup-node@v1
-    with:
-      node-version: '14'
-  
+  steps:   
   - name: Install capture-website-cli
     shell: bash
     run: |
