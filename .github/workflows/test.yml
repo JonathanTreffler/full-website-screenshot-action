@@ -1,0 +1,16 @@
+name: Test Action
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+jobs:
+  screenshot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test Action
+        uses: JonathanTreffler/screenshot-action@main
+        with:
+          url: https://google.com
+          destination: ./screenshot.png
