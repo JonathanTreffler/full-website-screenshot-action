@@ -11,13 +11,16 @@ inputs:
     default: './screenshot.png'
 runs:
   using: "composite"
-  steps:   
+  steps:
   - name: Install capture-website-cli
     shell: bash
     run: |
-      npm install --global capture-website-cli
-      
+      echo "Installing dependencies ..."
+      npm install --global capture-website-cli 1> /dev/null
+      echo "Dependencies installed successfully"
+  
   - name: Screenshot Website
     shell: bash
     run: |
       capture-website ${{ inputs.url }} --output ${{ inputs.destination }} --full-page
+      && echo "Screenshot done"
